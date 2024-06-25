@@ -1,9 +1,9 @@
-import Nav from "../components/Nav";
+import PageNav from "../components/PageNav";
 
 function Homepage() {
   return (
     <div>
-      <Nav />
+      <PageNav />
       <h1>Homepage</h1>
     </div>
   );

@@ -1,15 +1,19 @@
 import { NavLink } from "react-router-dom";
 
-function Nav() {
+function PageNav() {
   return (
     <ul>
       <li>
         <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
         <NavLink to="/pricing">Pricing</NavLink>
+      </li>
+      <li>
         <NavLink to="/product">Product</NavLink>
       </li>
     </ul>
   );
 }
 
-export default Nav;
+export default PageNav;

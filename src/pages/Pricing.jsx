@@ -1,9 +1,9 @@
-import Nav from "../components/Nav";
+import PageNav from "../components/PageNav";
 
 function Pricing() {
   return (
     <div>
-      <Nav />
+      <PageNav />
       <h1>Pricing</h1>
     </div>
   );
