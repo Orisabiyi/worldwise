@@ -10,7 +10,7 @@ function CountryList({ cities, isLoading }) {
     <Message message="Add your first city by clicking on a city on the map" />;
 
   return (
-    <ul className={styles.CountryList}>
+    <ul className={styles.countryList}>
       {cities.map((city) => (
         <CountryItem city={city} key={city.id} />
       ))}
