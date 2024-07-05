@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import Button from "./Button";
 import styles from "./City.module.css";
 
@@ -20,9 +21,11 @@ function City() {
 
   const { cityName, emoji, date, notes } = currentCity;
 
+  const { id } = useParams();
+
   return (
     <div className={styles.city}>
-      city
+      city {id}
       {/* <div className={styles.row}>
         <h6>City name</h6>
         <h3>
