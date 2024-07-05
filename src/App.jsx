@@ -10,7 +10,7 @@ import PageNotFound from "./pages/PageNotFound";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
 
-const BASE_URL = "http://localhost:9000";
+const BASE_URL = "http://localhost:8000";
 
 function App() {
   const [cities, setCities] = useState([]);
