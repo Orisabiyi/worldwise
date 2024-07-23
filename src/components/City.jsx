@@ -26,7 +26,6 @@ function City() {
 
   return (
     <div className={styles.city}>
-      city {id}
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
