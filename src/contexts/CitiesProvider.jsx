@@ -34,6 +34,8 @@ function CitiesProvider({ children }) {
 
 function useCities() {
   const value = useContext(citiesContext);
+  if (value === undefined)
+    throw new Error("Cities Context Provider is called out of place");
   return value;
 }
 
