@@ -26,10 +26,10 @@ function CitiesProvider({ children }) {
     getCountries();
   }, []);
 
-  async function getCity() {
+  async function getCity(id) {
     try {
       setIsLoading(true);
-      const res = await fetch(`${BASE_URL}/cities`);
+      const res = await fetch(`${BASE_URL}/cities/${id}`);
       const data = await res.json();
 
       setCurrentCity(data);

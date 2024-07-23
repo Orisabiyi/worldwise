@@ -22,6 +22,8 @@ function City() {
     [id]
   );
 
+  console.log(currentCity);
+
   const { cityName, emoji, date, notes } = currentCity;
 
   return (
