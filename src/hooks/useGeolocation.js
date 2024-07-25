@@ -15,14 +15,14 @@ export function useGeolocate(defaultPosition = null) {
           lat: position.coords.latitude,
           long: position.coords.longitude,
         });
+        setIsLoading(false);
       },
       function (positionError) {
         setPosition("");
         setError(positionError.message);
+        setIsLoading(false);
       }
     );
-
-    if (error || position) setIsLoading(false);
   }
 
   return { loading, position, error, getPosition };
