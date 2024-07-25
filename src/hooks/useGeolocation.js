@@ -13,7 +13,7 @@ export function useGeolocate({ curPos = null }) {
         setError("");
         setPosition({
           lat: position.coords.latitude,
-          lon: position.coords.longitude,
+          long: position.coords.longitude,
         });
       },
       function (positionError) {
