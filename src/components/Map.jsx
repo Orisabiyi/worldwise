@@ -10,6 +10,7 @@ import {
 import styles from "./Map.module.css";
 import { useEffect, useState } from "react";
 import { useCities } from "../contexts/CitiesProvider";
+import Button from "./Button";
 
 function Map() {
   const [searchParam] = useSearchParams();
@@ -27,6 +28,7 @@ function Map() {
 
   return (
     <div className={styles.mapContainer}>
+      <Button type="position">Use Current Location</Button>
       <MapContainer
         center={mapPosition}
         zoom={6}
