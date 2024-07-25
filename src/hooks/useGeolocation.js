@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export function useGeolocate() {
-  const [position, setPosition] = useState(false);
+export function useGeolocate({ curPos = null }) {
+  const [position, setPosition] = useState(curPos);
   const [loading, setIsLoading] = useState("");
   const [error, setError] = useState("");
 
@@ -27,4 +27,3 @@ export function useGeolocate() {
 
   return { loading, position, error, getPosition };
 }
-
