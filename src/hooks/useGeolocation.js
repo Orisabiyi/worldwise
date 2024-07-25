@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function useGeolocate({ defaultPosition = null }) {
+export function useGeolocate(defaultPosition = null) {
   const [position, setPosition] = useState(defaultPosition);
   const [loading, setIsLoading] = useState("");
   const [error, setError] = useState("");

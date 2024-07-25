@@ -15,7 +15,11 @@ import { useGeolocate } from "../hooks/useGeolocation";
 
 function Map() {
   const { cities } = useCities();
-  const { loading, position, getPosition } = useGeolocate();
+  const {
+    loading,
+    position: geolocationPosition,
+    getPosition,
+  } = useGeolocate();
   const [searchParam] = useSearchParams();
   const [mapPosition, setMapPosition] = useState([40, 0]);
   const mapLat = searchParam.get("lat");
@@ -30,7 +34,9 @@ function Map() {
 
   return (
     <div className={styles.mapContainer}>
-      <Button type="position">Use Current Location</Button>
+      <Button type="position" onClick={getPosition}>
+        {loading ? "loading..." : "Use Current Location"}
+      </Button>
       <MapContainer
         center={mapPosition}
         zoom={6}
