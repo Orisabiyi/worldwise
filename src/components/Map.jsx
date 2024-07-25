@@ -1,4 +1,4 @@
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   MapContainer,
   TileLayer,
@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { useCities } from "../contexts/CitiesProvider";
 import Button from "./Button";
 import { useGeolocate } from "../hooks/useGeolocation";
+import { useUrlPosition } from "../hooks/useUrlPosition";
 
 function Map() {
   const { cities } = useCities();
@@ -20,10 +21,8 @@ function Map() {
     position: geolocationPosition,
     getPosition,
   } = useGeolocate();
-  const [searchParam] = useSearchParams();
   const [mapPosition, setMapPosition] = useState([40, 0]);
-  const mapLat = searchParam.get("lat");
-  const mapLng = searchParam.get("lng");
+  const [mapLat, mapLng] = useUrlPosition();
 
   useEffect(
     function () {
