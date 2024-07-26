@@ -52,7 +52,7 @@ function CitiesProvider({ children }) {
       });
       const data = await res.json();
 
-      // setCurrentCity(data);
+      setCities((cities) => [...cities, data]);
       console.log(data);
     } catch (err) {
       alert(err);
