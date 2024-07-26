@@ -66,6 +66,20 @@ function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    const newCity = {
+      cityName,
+      country,
+      emoji,
+      date,
+      notes,
+      position: {
+        lat,
+        lng,
+      },
+    };
+
+    console.log(newCity);
   }
 
   if (isLoadingGeocoding) <Spinner />;
