@@ -13,7 +13,11 @@ export default function Login() {
 
   const { login, isAuthenticated } = useAuth();
 
-  // if (email && password) login(email, password);
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (email && password) login(email, password);
+  }
 
   useEffect(function () {
     if (isAuthenticated) navigate("/app", { replace: true });
@@ -23,7 +27,7 @@ export default function Login() {
     <main className={styles.login}>
       <PageNav />
 
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.row}>
           <label htmlFor="email">Email address</label>
           <input
