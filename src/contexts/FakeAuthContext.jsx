@@ -23,7 +23,11 @@ function FakeAuthContext({ children }) {
     initialState
   );
 
-  return <authContext.Provider>{children}</authContext.Provider>;
+  return (
+    <authContext.Provider value={{ user, isAuthenticated }}>
+      {children}
+    </authContext.Provider>
+  );
 }
 
 function useAuth() {
