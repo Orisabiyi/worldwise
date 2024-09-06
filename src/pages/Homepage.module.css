@@ -36,5 +36,6 @@
 @media only screen and (max-width: 37.5em) {
   .homepage {
     padding: 2rem;
+    overflow: hidden;
   }
 }
