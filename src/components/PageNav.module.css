@@ -45,6 +45,14 @@ a.ctaLink:visited {
 
   .nav a {
     align-self: flex-start;
+    flex: 0 0 auto;
+    width: 40%;
+  }
+
+  .nav img {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
   .nav figure {
