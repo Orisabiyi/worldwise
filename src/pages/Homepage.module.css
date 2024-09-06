@@ -38,4 +38,12 @@
     padding: 2rem;
     overflow: hidden;
   }
+
+  .homepage h1 {
+    font-size: 4rem;
+  }
+
+  .homepage h2 {
+    font-size: 1.6rem;
+  }
 }
