@@ -34,16 +34,52 @@ a.ctaLink:visited {
   border-radius: 7px;
 }
 
+.nav figure {
+  display: none;
+}
+
 @media only screen and (max-width: 37.5em) {
   .nav {
-    justify-content: space-between;
+    position: relative;
   }
 
   .nav a {
     align-self: flex-start;
   }
 
+  .nav figure {
+    display: block;
+    width: 4rem;
+    height: 0.2rem;
+    background-color: rgb(255, 255, 255);
+
+    position: absolute;
+    top: 2.5rem;
+    right: 1rem;
+  }
+
+  .nav figure::before,
+  .nav figure::after {
+    content: "";
+    height: 0.2rem;
+    width: 4rem;
+    background-color: rgb(255, 255, 255);
+
+    position: absolute;
+  }
+
+  .nav figure::before {
+    top: -1rem;
+  }
+
+  .nav figure::after {
+    top: 1rem;
+  }
+
   .nav ul {
     flex-direction: column;
+    transform: translateX(30rem);
+    width: 0;
+    height: 0;
   }
 }
