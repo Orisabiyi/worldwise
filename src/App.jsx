@@ -11,13 +11,6 @@ import Form from "./components/Form";
 import { lazy, Suspense } from "react";
 import SpinnerFullPage from "./components/SpinnerFullPage";
 
-// import Homepage from "./pages/Homepage";
-// import Pricing from "./pages/Pricing";
-// import Product from "./pages/Product";
-// import Login from "./pages/Login";
-// import AppLayout from "./pages/AppLayout";
-// import PageNotFound from "./pages/PageNotFound";
-
 const Homepage = lazy(() => import("./pages/Homepage"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const Product = lazy(() => import("./pages/Product"));
