@@ -20,6 +20,8 @@ function PageNav() {
           </NavLink>
         </li>
       </ul>
+
+      <figure></figure>
     </nav>
   );
 }

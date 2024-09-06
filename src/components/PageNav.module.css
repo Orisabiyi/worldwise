@@ -13,6 +13,7 @@
 
 .nav a:link,
 .nav a:visited {
+  display: inline-block;
   text-decoration: none;
   color: var(--color-light--2);
   text-transform: uppercase;
@@ -31,4 +32,18 @@ a.ctaLink:visited {
   color: var(--color-dark--0);
   padding: 0.8rem 2rem;
   border-radius: 7px;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav a {
+    align-self: flex-start;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
 }
